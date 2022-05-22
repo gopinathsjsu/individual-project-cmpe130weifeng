@@ -15,32 +15,48 @@ public class RunClient {
     public static List<String> flight_number_list = new ArrayList<>();
     public static List<String> category_list = new ArrayList<>();
     public static List<Integer> seat_list = new ArrayList<>();
+    // list for hold invalid output info
+    public static List<String> invalid_info_list = new ArrayList<>();
 
     public static void main(String[] args) {
 
+        if (args.length < 1) {
+            System.out.println("Invalid file path");
+        }
 
-        read_Sample_csv();
+        FlightService.storeDB(args[1]);
+        read_Sample_csv(args[0]);
 
         // To show the output on terminal
-        System.out.println("Booking Name | flight Number | Category | Number of seat | Total Price");
-        for(int i=0 ; i < passenger_list.size(); i++)
-        {
-            System.out.printf("%s,%s,%s,%d,%4d", passenger_list.get(i).getBooking_name(),
-                    flight_number_list.get(i), category_list.get(i), seat_list.get(i),
-                    price_list.get(i));
-            System.out.println();
-        }
+//        System.out.println("Booking Name | flight Number | Category | Number of seat | Total Price");
+//        for(int i=0 ; i < passenger_list.size(); i++)
+//        {
+//            System.out.printf("%s,%s,%s,%d,%4d", passenger_list.get(i).getBooking_name(),
+//                    flight_number_list.get(i), category_list.get(i), seat_list.get(i),
+//                    price_list.get(i));
+//            System.out.println();
+//        }
+
+        // To show the invalid output on terminal
+//        System.out.println();
+//        for(int i=0 ; i < invalid_info_list.size(); i++)
+//        {
+//            System.out.println(invalid_info_list.get(i));
+//        }
+
+
 
         //--------------------------------------------------------------------------
         // for saving the output
-        //save_output_as_txt();
-        save_output_as_csv();
+        save_output_as_txt(args[3]);
+        save_output_as_csv(args[2]);
     }
 
 
-    public static void read_Sample_csv()
+    public static void read_Sample_csv(String file)
     {
-        String file_name = "C:\\Users\\ray\\Desktop\\flight_sys\\src\\main\\resources\\Sample.csv";
+        //String file_name = "C:\\Users\\ray\\Desktop\\flight_sys\\src\\main\\resources\\Sample.csv";
+        String file_name = file;
         BufferedReader reader = null;
         String line = "";
 
@@ -53,6 +69,17 @@ public class RunClient {
                 double in_double_datatype = Double.parseDouble(row[4]);
                 String credit_card_number =  remove_E_notation(in_double_datatype);
                 Passenger temp = new Passenger(row[0], credit_card_number);
+
+                if(temp.getCredit_card_type() == null )
+                {
+                    invalid_info_list.add("Please enter correct booking details for " + temp.getBooking_name()
+                    + ":" + " invalid card number");
+                }
+                if(FlightService.find_flight(row[1]) == null)
+                {
+                    invalid_info_list.add("Please enter correct booking details for " + temp.getBooking_name()
+                            + ":" + " invalid flight number");
+                }
                 if((temp.getCredit_card_type()) != null &&
                         (FlightService.find_flight(row[1])) != null)
                 {
@@ -82,17 +109,23 @@ public class RunClient {
         return formatter.format(value);
     }
 
-    public static void save_output_as_txt()
+    public static void save_output_as_txt(String txt_file)
     {
         try {
-            FileWriter myWriter = new FileWriter("C:\\Users\\ray\\Desktop\\flight_sys\\src\\main\\resources\\Output.txt");
+            FileWriter myWriter = new FileWriter(txt_file);
 
-            myWriter.write("Booking Name,flight Number,Category,Number of seat,Total Price\n");
-            for(int i=0 ; i < passenger_list.size(); i++)
+//            myWriter.write("Booking Name,flight Number,Category,Number of seat,Total Price\n");
+//            for(int i=0 ; i < passenger_list.size(); i++)
+//            {
+//                myWriter.write(passenger_list.get(i).getBooking_name()+","+
+//                        flight_number_list.get(i)+","+category_list.get(i)+","+seat_list.get(i)+","+
+//                        price_list.get(i));
+//                myWriter.write("\n");
+//            }
+
+            for(int i=0 ; i < invalid_info_list.size(); i++)
             {
-                myWriter.write(passenger_list.get(i).getBooking_name()+","+
-                        flight_number_list.get(i)+","+category_list.get(i)+","+seat_list.get(i)+","+
-                        price_list.get(i));
+                myWriter.write((invalid_info_list.get(i)));
                 myWriter.write("\n");
             }
             myWriter.close();
@@ -103,9 +136,9 @@ public class RunClient {
         }
     }
 
-    public static void save_output_as_csv()
+    public static void save_output_as_csv(String output_file)
     {
-        File file = new File("C:\\Users\\ray\\Desktop\\flight_sys\\src\\main\\resources\\Output.csv");
+        File file = new File(output_file);
         try {
             // create FileWriter object with file as parameter
             FileWriter outputfile = new FileWriter(file);

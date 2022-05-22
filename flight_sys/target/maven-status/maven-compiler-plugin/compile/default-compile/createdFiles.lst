@@ -1,0 +1,7 @@
+test\FlightService.class
+test\Flight.class
+test\RunClient.class
+test\NoFlight.class
+test\PassengerBuilder.class
+test\Passenger.class
+test\FlightFactory.class

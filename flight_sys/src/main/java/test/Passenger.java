@@ -1,6 +1,6 @@
 package test;
 
-public class Passenger {
+public class Passenger{
 
     private String booking_name; //Person's name
     private String credit_card_number;

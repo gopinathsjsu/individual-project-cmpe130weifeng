@@ -2,6 +2,10 @@ package test;
 
 import test.Flight;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -10,18 +14,27 @@ public class FlightService {
 
     private static List<Flight> all_flights = new LinkedList<>();
 
-    // run automatically; behaves like a static database
-    static {
-        all_flights.add(new Flight("Economy", "SJ456",
-                5, 250, "Seattle", "San Jose"));
-        all_flights.add(new Flight("Premium Economy", "BY110",
-                5, 500, "San Francisco", "New York"));
-        all_flights.add(new Flight("Business", "BY110",
-                5, 2000, "San Francisco", "New York"));
-        all_flights.add(new Flight("Economy", "CA453",
-                5, 300, "Seattle", "San Jose"));
-        all_flights.add(new Flight("Business", "CA453",
-                5, 1500, "Seattle", "San Jose"));
+    public static void storeDB(String file)
+    {
+
+        String file_name = file;
+        BufferedReader reader = null;
+        String line = "";
+
+        try{
+            reader = new BufferedReader(new FileReader(file_name));
+            line = reader.readLine();
+            while((line = reader.readLine())!= null){
+
+                String[] row = line.split(",");
+                all_flights.add(new Flight(row[0],row[1], Integer.parseInt(row[2]),
+                        Integer.parseInt(row[3]), row[4],row[5]));
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     // find the target flight based on flight number
