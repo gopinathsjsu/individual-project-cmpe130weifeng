@@ -1,3 +1,4 @@
 test\RunClientTest.class
 test\FlightFactoryTest.class
 test\NoFlightTest.class
+test\PassengerBuilderTest.class

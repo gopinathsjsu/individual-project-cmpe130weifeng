@@ -18,11 +18,13 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/test/FlightService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test/FlightService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/test/Passenger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test/Passenger.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/test/RunClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test/RunClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Output.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Output.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/Output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Output.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Output.csv" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Output.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Output.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/test/FlightService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/test/FlightService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/test/RunClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/test/RunClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/test/PassengerBuilderTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/test/PassengerBuilderTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/test/PassengerBuilderTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +92,7 @@
       <recent name="C:\Users\ray\Desktop\maven_learn\src\test\java\org\example" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.RunClient">
+  <component name="RunManager" selected="JUnit.PassengerBuilderTest">
     <configuration name="RunClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="test.RunClient" />
       <module name="flight_sys" />
@@ -120,38 +122,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FlightFactoryTest.should_get_BY110_Business" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="flight_sys" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.FlightFactoryTest" />
-      <option name="METHOD_NAME" value="should_get_BY110_Business" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FlightFactoryTest.should_get_BY110_Preminum" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="flight_sys" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.FlightFactoryTest" />
-      <option name="METHOD_NAME" value="should_get_BY110_Preminum" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="FlightFactoryTest.should_get_CA453_Business" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="flight_sys" />
       <extension name="coverage">
@@ -168,7 +138,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FlightFactoryTest.should_get_CA453_Economy" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PassengerBuilderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="flight_sys" />
       <extension name="coverage">
         <pattern>
@@ -177,8 +147,23 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.FlightFactoryTest" />
-      <option name="METHOD_NAME" value="should_get_CA453_Economy" />
+      <option name="MAIN_CLASS_NAME" value="test.PassengerBuilderTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RunClientTest.shouldAnswerWithTrue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="flight_sys" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.RunClientTest" />
+      <option name="METHOD_NAME" value="shouldAnswerWithTrue" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -187,18 +172,17 @@
     <list>
       <item itemvalue="Application.RunClient" />
       <item itemvalue="JUnit.FlightFactoryTest" />
-      <item itemvalue="JUnit.FlightFactoryTest.should_get_BY110_Business" />
-      <item itemvalue="JUnit.FlightFactoryTest.should_get_BY110_Preminum" />
       <item itemvalue="JUnit.FlightFactoryTest.should_get_CA453_Business" />
-      <item itemvalue="JUnit.FlightFactoryTest.should_get_CA453_Economy" />
+      <item itemvalue="JUnit.RunClientTest.shouldAnswerWithTrue" />
+      <item itemvalue="JUnit.PassengerBuilderTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PassengerBuilderTest" />
+        <item itemvalue="JUnit.RunClientTest.shouldAnswerWithTrue" />
         <item itemvalue="Application.RunClient" />
         <item itemvalue="JUnit.FlightFactoryTest" />
         <item itemvalue="JUnit.FlightFactoryTest.should_get_CA453_Business" />
-        <item itemvalue="JUnit.FlightFactoryTest.should_get_CA453_Economy" />
-        <item itemvalue="JUnit.FlightFactoryTest.should_get_BY110_Business" />
       </list>
     </recent_temporary>
   </component>
@@ -278,22 +262,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="578" y="117" key="Github.UntrackedFilesDialog/0.0.1536.824@0.0.1536.824" timestamp="1651824258319" />
-    <state width="1493" height="213" key="GridCell.Tab.0.bottom" timestamp="1653183434305">
+    <state width="1493" height="213" key="GridCell.Tab.0.bottom" timestamp="1653186025637">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1653183434305" />
-    <state width="1493" height="213" key="GridCell.Tab.0.center" timestamp="1653183434305">
+    <state width="1493" height="213" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1653186025637" />
+    <state width="1493" height="213" key="GridCell.Tab.0.center" timestamp="1653186025637">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1653183434305" />
-    <state width="1493" height="213" key="GridCell.Tab.0.left" timestamp="1653183434305">
+    <state width="1493" height="213" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1653186025637" />
+    <state width="1493" height="213" key="GridCell.Tab.0.left" timestamp="1653186025637">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1653183434305" />
-    <state width="1493" height="213" key="GridCell.Tab.0.right" timestamp="1653183434305">
+    <state width="1493" height="213" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1653186025637" />
+    <state width="1493" height="213" key="GridCell.Tab.0.right" timestamp="1653186025637">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1653183434305" />
+    <state width="1493" height="213" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1653186025637" />
     <state width="1147" height="225" key="GridCell.Tab.1.bottom" timestamp="1651816129828">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -330,10 +314,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1653167309378" />
-    <state x="847" y="234" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1651816567924">
+    <state x="847" y="234" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1653185435853">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="847" y="234" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1536.824@0.0.1536.824" timestamp="1651816567924" />
+    <state x="847" y="234" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1536.824@0.0.1536.824" timestamp="1653185435853" />
     <state x="570" y="319" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1651821467511">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
